@@ -17,9 +17,9 @@ class CreateMarks extends Migration
             $table->id();
             $table->foreignId('sid')->constrained('students');
             $table->string('term');
-            $table->float('maths',3,2);
-            $table->float('science',3,2);
-            $table->float('history',3,2);
+            $table->integer('maths');
+            $table->integer('science');
+            $table->integer('history');
             $table->timestamps();
         });
     }
